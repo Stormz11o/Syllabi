@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font for the pages as well as the colors that will be used.*/
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    --bg-primary: rgb(43, 65, 98);
+    --bg-secondary: rgb(126, 141, 133);
+    --font-color-primary: rgb(179, 191, 184);
+    --font-color-secondary: rgb(240, 247, 244);
+    --backup-color: rgb(244, 116, 59);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    padding: 0 50px;
+    border: 3px solid var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.navbar h1{
+    color: var(--font-color-primary);
+    font-weight: 600;
+    margin-left: 120px;
+}
+
+.navbar nav ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--font-color-secondary);
+    font-size: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover{
+    color: var(--backup-color);
+}
+
+.navbar i{
+    font-size: 30px;
+    color: var(--backup-color);
+}
+
+main{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+main i{
+    text-decoration: underline;
+    color: var(--font-color-primary);
+    margin-bottom: 10px;
+}
+main .intro{
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--bg-secondary);
+    color: var(--font-color-secondary);
+    padding: 20px 20px;
+    border-radius: 15px;
+    width: 55%;
+    top: 50%;
+    left: 41%;
+}
+
+main .intro a{
+    text-decoration: underline;
+    color: var(--font-color-secondary);
+    transition: color 0.3s ease;
+}
+
+main .intro a:hover{
+    color: var(--backup-color);
+}
+
+main .fun{
+    margin-top: 5px;
+    color: var(--font-color-primary);
+}
+
+main .fun .link{
+    text-decoration: underline;
+    color: var(--font-color-primary);
+    transition: color 0.3s ease;
+}
+
+main .fun .link:hover{
+    color: var(--backup-color);
+}
+
+main h2{
+    color: var(--font-color-primary);
+    margin-top: 30px;
+}
+
+main .credits{
+    color: var(--bg-secondary);
+    font-size: 20px;
+}
+
+/* Looked up how to style the progress bar on stackflow*/
+main progress {
+  border: outset var(--bg-secondary);
+  width: 200px;
+  height: 10px;
+  background: var(--bg-secondary);
+}
+
+main progress {
+  color: var(--bg-secondary);
+}
+
+main progress::-moz-progress-bar {
+  background:  var(--bg-secondary);
+}
+
+main progress::-webkit-progress-value {
+  background: var(--backup-color);
+}
+
+main progress::-webkit-progress-bar {
+  background: var(--font-color-secondary);
+}
+
+/* Similar to class I made the footer look nice*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
+    padding: 10px 5px;
+    border-radius: 15px;
+    width: 18%;
+    top: 80%;
+    left: 41%;
+    flex-direction: column;
+}
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin: 5px 0;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.category-list a:hover {
+    text-decoration: underline;
+}
+
+.syllabus-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    max-height: 400px; /* Limit the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Optional, to prevent content from touching the scrollbar */
+}
+
+.syllabus-item {
+    background-color: var(--bg-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    width: 130%;
+    text-align: center;
+    color: var(--font-color-secondary);
+}
+
+.syllabus-item img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.syllabus-item a {
+    display: block;
+    text-decoration: none;
+    color: var(--backup-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.syllabus-item a:hover {
+    text-decoration: underline;
+}
